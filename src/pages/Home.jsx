@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchCountries } from '../api/api.js';
+import CountryList from '../components/CountryList.jsx';
 
 export default function Home() {
     /* 국가데이터는 배열형태의 데이터 이므로 []를 함수에 넣어줌 */
@@ -16,5 +17,7 @@ export default function Home() {
         setInitData();
     },[])
 
-    return <div>Home</div>
+    return <div>
+        <CountryList countries={countries} />    
+    </div>;
 }
