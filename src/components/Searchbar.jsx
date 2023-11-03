@@ -33,7 +33,7 @@ export default function Searchbar({q}) {
               onChange={onChangeSearch}
               onKeyDown={onKeyDown} 
               placeholder='검색어를 입력하세요...' 
-              value={search}/>
+              value={search || ''}/>
             <button onClick={onClickSearch}>검색</button>          
         </div>
     );
